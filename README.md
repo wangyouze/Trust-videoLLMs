@@ -2,9 +2,9 @@
 
 ![](./docs/structure/logo.png)
 
-<span style="color: yellow;">1. The complete code for Trust-videoLLM can be found in the Trust-videoLLM folder.</span>
+<span style="color: red;">1. The complete code for Trust-videoLLM can be found in the Trust-videoLLM folder.</span>
 
-<span style="color: yellow;">2. Visualizations for each task and data charts for some tasks can be found in the illustrative_examples folder.</span>
+<span style="color: red;">2. Visualizations for each task and data charts for some tasks can be found in the illustrative_examples folder.</span>
 
 
 <hr style="border: 1px solid grey;">
