@@ -16,7 +16,7 @@ from .robustness_untargeted_attacks import UntargetedAttackDataset
 from .robustness_CapERA_dataset import CapERA
 from .robustness_natural_noise import NaturalNoiseMVBench
 from .robustness_adversarial_text import AdversarialTextDataset
-from .targeted_attack_MSVD_dataset import TargetedAttackDataset
+from .robustness_attack_MSVD_dataset import AttackDatasetForCaptioning
 from .fairness_stereotypical_content_generation import StereotypicalGenerationDataset
 from .fairness_agrement_on_stereotypes import StereoAgreement
 from .fairness_time_sensitivity import TimeSensitivity

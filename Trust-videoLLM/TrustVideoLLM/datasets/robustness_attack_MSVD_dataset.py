@@ -14,7 +14,7 @@ from TrustVideoLLM.methods.OOD_video_adversarial_attack import KeyFrameAttack
 
 
 @registry.register_dataset()
-class TargetedAttackDataset(BaseDataset):
+class AttackDatasetForCaptioning(BaseDataset):
     dataset_ids: Sequence[str] = [
         "AttackDataset",
         "Clean_AttackDataset"
