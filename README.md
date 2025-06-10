@@ -2,12 +2,11 @@
 
 ![](./docs/structure/logo.png)
 
-<span style="color: red;">1. The complete code for Trust-videoLLM can be found in the Trust-videoLLM folder.</span>
+<div style=" border-left: 5px solid #ffeb3b; padding: 10px;">
+  <strong>Note</strong>: <br>1. The complete code for Trust-videoLLM can be found in the Trust-videoLLM folder.<br> 2. Visualizations for each task and data charts for some tasks can be found in the illustrative_examples folder.
+</div>
 
-<span style="color: red;">2. Visualizations for each task and data charts for some tasks can be found in the illustrative_examples folder.</span>
 
-
-<hr style="border: 1px solid grey;">
 
 **Trust-videoLLM** is a robust benchmark designed to evaluate video-based large language models (videoLLMs) across five key dimensions: truthfulness, safety, robustness, fairness, and privacy. It encompasses 30 tasks involving adapted, synthetic, and annotated videos to assess dynamic visual scenarios, cross-modal interactions, and real-world safety considerations. Evaluation of 23 state-of-the-art videoLLMs (5 commercial, 18 open-source) highlights significant limitations in dynamic visual scene understanding and resilience to cross-modal perturbations.
 
