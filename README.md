@@ -1,8 +1,6 @@
 # Understanding and Benchmarking the Trustworthiness in Multimodal LLMs for Video Understanding
 
-![](./docs/structure/logo.png)
-
-
+![](./docs/structure/logo.jpg)
 
 
 <div style="border: 2px solid 	#32CD32; padding: 10px;">
