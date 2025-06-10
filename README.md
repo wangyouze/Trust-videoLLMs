@@ -5,7 +5,7 @@
 
 
 
-<div style="border: 2px solid yellow; padding: 10px;">
+<div style="border: 2px solid 	#32CD32; padding: 10px;">
 <strong>Note</strong>:<br>1. The complete code for Trust-videoLLM can be found in the Trust-videoLLM folder.<br> 2. Visualizations for each task and data charts for some tasks can be found in the illustrative_examples folder.
 </div>
 
