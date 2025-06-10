@@ -1,0 +1,28 @@
+dataset_id: "VideoJail"
+model_id: "LLaVA-Video-7B-Qwen2"
+log_file: "./logs/safety/videoJail.json"
+
+
+dataset_cfg: { 
+  videoJail_dir: "./data/safety/jailbreak/harmfs_video/",
+  videoJailPro_dir: "./data/safety/jailbreak/new_video_2x2_384_fps1/"
+  }
+
+
+generation_kwargs: {
+    'system': None,
+    'max_new_tokens': 1024,
+    'do_sample': False,
+  }
+
+evaluator_seq_cfgs:
+  [
+    {
+      "google_perspective_api_eval":
+        { metrics_cfg: { pred_mean: {} }},
+    },
+    {
+      "rule_reject_template_eval":
+        { metrics_cfg: { pred_mean: {} }},
+    }
+  ]

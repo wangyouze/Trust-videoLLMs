@@ -1,0 +1,34 @@
+dataset_id: "MM-SafetyBench"
+model_id: "LLaVA-Video-7B-Qwen2"
+# model_id: "LLaVA-Video-72B-Qwen2"
+# model_id: "mPLUG-Owl3-7B"
+# model_id: "MiniCPM-V-2_6"
+# model_id: "MiniCPM-o-2_6"
+# model_id: "long-llava-qwen2-7b"
+# model_id : "VideoLLaMA3-7B"
+log_file: "./logs/safety/mmSafetyBench.json"
+
+
+dataset_cfg: { 
+  data_dir: "./data/safety/MM-SafetyBench/typo_videos/mm-safety-bench-video.json",
+  video_dir: "./data/safety/MM-SafetyBench/typo_videos/",
+  }
+
+
+generation_kwargs: {
+    'system': None,
+    'max_new_tokens': 1024,
+    'do_sample': False,
+  }
+
+evaluator_seq_cfgs:
+  [
+    {
+      "google_perspective_api_eval":
+        { metrics_cfg: { pred_mean: {} }},
+    },
+    {
+      "rule_reject_template_eval":
+        { metrics_cfg: { pred_mean: {} }},
+    }
+  ]

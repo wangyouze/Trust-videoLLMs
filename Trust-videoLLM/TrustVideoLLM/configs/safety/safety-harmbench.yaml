@@ -1,0 +1,28 @@
+dataset_id: "HarmBenchDataset"
+model_id: "LLaVA-Video-7B-Qwen2"
+log_file: "./logs/safety/harmbench.json"
+
+
+dataset_cfg: { 
+  data_dir: "./data/safety/Harmbench/harmbench_behaviors_text_all.csv",
+  video_dir: "./data/safety/Harmbench/white.mp4",
+  }
+
+
+generation_kwargs: {
+    'system': None,
+    'max_new_tokens': 1024,
+    'do_sample': False,
+  }
+
+evaluator_seq_cfgs:
+  [
+    {
+      "google_perspective_api_eval":
+        { metrics_cfg: { pred_mean: {} }},
+    },
+    {
+      "rule_reject_template_eval":
+        { metrics_cfg: { pred_mean: {} }},
+    }
+  ]
