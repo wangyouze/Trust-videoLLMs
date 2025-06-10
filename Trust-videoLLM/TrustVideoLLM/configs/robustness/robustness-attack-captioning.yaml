@@ -15,15 +15,9 @@ generation_kwargs: {
 }
 
 dataset_cfg: { 
-  video_path: "./data/robustness/targeted_adversarial_attack/MSVD_sampled/",
-  data_dir: "./data/robustness/targeted_adversarial_attack/targeted_adversarial_attack_videos.json"
+  video_path: "./data/robustness/adversarial_attack_captioning/MSVD_sampled/",
+  data_dir: "./data/robustness/adversarial_attack_captioning/adversarial_attack_videos.json"
   }
-
-# dataset_cfg: { 
-#   video_path: "/data1/home/wangyouze/dataset/MultiTrust-video/MSVD/YouTubeClips/",
-#   data_dir: "/data1/home/wangyouze/dataset/MultiTrust-video/MSVD/annotations.txt"
-#   }
-
 
 evaluator_seq_cfgs:
   [

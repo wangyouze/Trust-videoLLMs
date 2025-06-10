@@ -101,8 +101,8 @@ class UntargetedAttackDataset(BaseDataset):
             GroupNormalize(input_mean, input_std) 
         ])
 
-        # self.adversarial_attack = KeyFrameAttack(epsilon=16/255., alpha=1/255, 
-        #          temporal_weight=0.2, flow_threshold=2.5, device='cuda')
+        self.adversarial_attack = KeyFrameAttack(epsilon=16/255., alpha=1/255, 
+                 temporal_weight=0.2, flow_threshold=2.5, device='cuda')
        
     
     def __str__(self):

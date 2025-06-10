@@ -16,8 +16,8 @@ from TrustVideoLLM.methods.OOD_video_adversarial_attack import KeyFrameAttack
 @registry.register_dataset()
 class TargetedAttackDataset(BaseDataset):
     dataset_ids: Sequence[str] = [
-        "TargetedAttackDataset",
-        "Clean_TargetedAttackDataset"
+        "AttackDataset",
+        "Clean_AttackDataset"
     ]
    
     def __init__(self,  dataset_id, method_hook: Optional[BaseMethod] = None, data_dir=None, video_path=None):
@@ -32,8 +32,8 @@ class TargetedAttackDataset(BaseDataset):
 
         self.video_ids = list(self.data.keys())
 
-        # self.adversarial_attack = KeyFrameAttack(epsilon=16/255., alpha=1/255, 
-        #          temporal_weight=0.2, flow_threshold=2.5, is_target=True, device='cuda')
+        self.adversarial_attack = KeyFrameAttack(epsilon=16/255., alpha=1/255, 
+                 temporal_weight=0.2, flow_threshold=2.5, is_target=True, device='cuda')
        
         
     def __len__(self):
@@ -73,7 +73,7 @@ class TargetedAttackDataset(BaseDataset):
         
         video_id = video_path.split('/')[-1]
     
-        adv_video_path = f'./data/robustness/targeted_adversarial_attack/adv_videos/adv_{video_id}'
+        adv_video_path = f'./data/robustness/adversarial_attack_captioning/adv_videos/adv_{video_id}'
         if not os.path.exists(adv_video_path):
             adv_video_frames = self.adversarial_attack.generate_attack(video_frames, caption_target='A group of people dancing happily', use_sliding_window=False)
 
@@ -112,7 +112,7 @@ class TargetedAttackDataset(BaseDataset):
         print('video_path:', video_path)
         video_frames, adv_video_path = self.read_video(video_path)
 
-        if self.dataset_id == 'TargetedAttackDataset':
+        if self.dataset_id == 'AttackDataset':
             video_path = adv_video_path
 
         answer = self.data[video_id]
