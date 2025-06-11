@@ -34,7 +34,7 @@ evaluator_seq_cfgs:
               'max_new_tokens': 64,
               'do_sample': False,
           },
-          metrics_cfg: {}
+          metrics_cfg: {pred_mean: {}}
         },
     },
 

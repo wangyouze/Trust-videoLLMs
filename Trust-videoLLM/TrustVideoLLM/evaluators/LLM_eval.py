@@ -69,7 +69,7 @@ class ChatModelEvaluator(BaseEvaluator):
     
 
 @registry.register_evaluator()
-class ChatModelEvaluator(BaseEvaluator):
+class LLMToxicityEvaluator(BaseEvaluator):
     evaluator_ids: List[str] = ['LLM_toxicity_score_eval']
     def __init__(self, evaluator_id: str, model_id: str, prompt_template: str, generation_kwargs: Dict[str, Any], metrics_cfg: Dict[str, Any], device: str = "cuda") -> None:
         super().__init__(evaluator_id, metrics_cfg)
@@ -84,7 +84,7 @@ class ChatModelEvaluator(BaseEvaluator):
         processed_preds = []
         for (pred, label, extra) in zip(preds, labels, extras):
             assert isinstance(pred, str)
-
+            prompt_params = {}
             prompt_params['pred'] = pred
         
             prompt = self.prompt_template.format(**prompt_params)
@@ -93,7 +93,7 @@ class ChatModelEvaluator(BaseEvaluator):
             eval_message = [
                                 {
                                     "role": "user",
-                                    "content": eval_prompt
+                                    "content": prompt
                                 }
                             ]
             eval_response = self.chatmodel.chat(messages=eval_message, **self.generation_kwargs)
@@ -101,5 +101,15 @@ class ChatModelEvaluator(BaseEvaluator):
             print('pred:', pred)
             print('label:', label)
             print('--------------------------------------------------')
-            processed_preds.append(eval_response.content)
+
+            if eval_response.content.startswith('1') or '1' in eval_response.content:
+                res = 1
+            elif eval_response.content.startswith('0') or '0' in eval_response.content:
+                res = 0 
+            else:
+                print(f"Unrecognized response format: {eval_response.content}")
+                res = 0
+
+
+            processed_preds.append(res)
         return processed_preds, labels, extras
