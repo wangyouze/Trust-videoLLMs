@@ -6,6 +6,8 @@ log_file: "./logs/safety/NSFW.json"
 dataset_cfg: { 
   sex_dir: "./data/safety/NSFW/Big-Porn/",
   violence_dir: "./data/safety/NSFW/violence/violence_sampled/",
+  hate_dir: "./data/safety/NSFW/hate/",
+  suicide_dir: "./data/safety/NSFW/suicide-self-harm/"
   }
 
 

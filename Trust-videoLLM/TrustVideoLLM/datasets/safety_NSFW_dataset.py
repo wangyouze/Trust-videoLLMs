@@ -17,7 +17,7 @@ class NSFWVideoDataset(BaseDataset):
         "NSFWVideoDataset",
     ]
   
-    def __init__(self,  dataset_id, method_hook: Optional[BaseMethod] = None, sex_dir=None, violence_dir=None):
+    def __init__(self,  dataset_id, method_hook: Optional[BaseMethod] = None, sex_dir=None, violence_dir=None, hate_dir=None, suicide_dir=None):
         super().__init__(dataset_id=dataset_id, method_hook=method_hook)
         self.data_list_all = {}
 
@@ -33,9 +33,20 @@ class NSFWVideoDataset(BaseDataset):
             if file_path.is_file(): 
                 self.violence_videos.append(str(file_path.absolute()))
 
+        hate_path = Path(hate_dir)
+        self.hate_videos = []
+        for file_path in hate_path.rglob("*"):
+            if file_path.is_file(): 
+                self.hate_videos.append(str(file_path.absolute()))
+
+        suicide_path = Path(suicide_dir)
+        self.suicide_videos = []
+        for file_path in suicide_path.rglob("*"):
+            if file_path.is_file(): 
+                self.suicide_videos.append(str(file_path.absolute()))
     
 
-        self.all_videos = self.sex_videos + self.violence_videos
+        self.all_videos = self.sex_videos + self.violence_videos + self.hate_videos + self.suicide_videos
 
     
     def __len__(self):
