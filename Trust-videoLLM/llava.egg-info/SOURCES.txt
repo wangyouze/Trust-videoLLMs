@@ -1,6 +1,0 @@
-pyproject.toml
-llava.egg-info/PKG-INFO
-llava.egg-info/SOURCES.txt
-llava.egg-info/dependency_links.txt
-llava.egg-info/requires.txt
-llava.egg-info/top_level.txt
