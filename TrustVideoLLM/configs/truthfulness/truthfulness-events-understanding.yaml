@@ -1,0 +1,36 @@
+dataset_id: "YouCook2_sampled"
+# model_id: "LLaVA-Video-7B-Qwen2"
+# model_id: "mPLUG-Owl3-7B"
+# model_id: "MiniCPM-V-2_6"
+# model_id: "MiniCPM-o-2_6"
+# model_id: "long-llava-qwen2-7b"
+# model_id : "VideoLLaMA3-7B"
+# model_id: "sharegpt4video-8b"
+# model_id: "LongVA-7B-TPO"
+# model_id: "Video-ChatGPT-7B"
+model_id: "Oryx-1.5-7B"
+log_file: "./logs/truthfulness/YouCook2_sampled.json"
+
+
+dataset_cfg: { 
+  data_dir: "./data/truthfulness/YouCook2/json/augmented_sampled_data.json",
+  video_dir: "./data/truthfulness/YouCook2/YouCookIIVideos/val/",
+  }
+
+
+generation_kwargs: {
+    'system': "Carefully watch the video and pay attention to the cause and sequence of events, the detail and movement of objects, and the action and pose of persons. Based on your observations, answer the question.\n",
+    'max_new_tokens': 1024,
+    'do_sample': False,
+  }
+
+
+evaluator_seq_cfgs:
+  [
+
+    {
+    
+      "rule_yes_or_no_eval":
+        { metrics_cfg: { pred_mean: {} }},
+    }
+  ]
