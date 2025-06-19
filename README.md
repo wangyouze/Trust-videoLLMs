@@ -127,3 +127,17 @@ scripts/score
 
 ![](./docs/structure/tasks_list.png)
 
+
+### Citation
+If you find our work useful in your research, we kindly encourage you to cite our paper.
+```
+@misc{wang2025understandingbenchmarkingtrustworthinessmultimodal,
+      title={Understanding and Benchmarking the Trustworthiness in Multimodal LLMs for Video Understanding}, 
+      author={Youze Wang and Zijun Chen and Ruoyu Chen and Shishen Gu and Yinpeng Dong and Hang Su and Jun Zhu and Meng Wang and Richang Hong and Wenbo Hu},
+      year={2025},
+      eprint={2506.12336},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2506.12336}, 
+}
+```
