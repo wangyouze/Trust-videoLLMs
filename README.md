@@ -26,7 +26,7 @@ pip installl requirements.txt
 
 ### Datasets
 ***
-Due to the dataset containing unsafe content such as pornography, violence, and gore, please contact wangyouze6889@163.com if you need access to the dataset.
+This dataset contains potentially offensive or disturbing content, including but not limited to pornography, violence, and graphic videos. Researchers requiring access to the dataset must contact wangyouze6889@163.com for authorization.
 
 ### Run
 
