@@ -26,7 +26,7 @@ pip installl requirements.txt
 
 ### Datasets
 ***
-Datasets is coming soon.
+Due to the dataset containing unsafe content such as pornography, violence, and gore, please contact wangyouze6889@163.com if you need access to the dataset.
 
 ### Run
 
