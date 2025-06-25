@@ -29,6 +29,7 @@ pip installl requirements.txt
 This dataset contains potentially offensive or disturbing content, including but not limited to pornography, violence, and graphic videos. Researchers requiring access to the dataset must contact wangyouze6889@163.com for authorization.
 
 ### Run
+***
 
 **For Inference:**
 ```
@@ -124,6 +125,7 @@ scripts/score
 ```
 
 ### Tasks List
+***
 
 ![](./docs/structure/tasks_list.png)
 
@@ -131,13 +133,10 @@ scripts/score
 ### Citation
 If you find our work useful in your research, we kindly encourage you to cite our paper.
 ```
-@misc{wang2025understandingbenchmarkingtrustworthinessmultimodal,
-      title={Understanding and Benchmarking the Trustworthiness in Multimodal LLMs for Video Understanding}, 
-      author={Youze Wang and Zijun Chen and Ruoyu Chen and Shishen Gu and Yinpeng Dong and Hang Su and Jun Zhu and Meng Wang and Richang Hong and Wenbo Hu},
-      year={2025},
-      eprint={2506.12336},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2506.12336}, 
+@article{wang2025understanding,
+  title={Understanding and Benchmarking the Trustworthiness in Multimodal LLMs for Video Understanding},
+  author={Wang, Youze and Chen, Zijun and Chen, Ruoyu and Gu, Shishen and Dong, Yinpeng and Su, Hang and Zhu, Jun and Wang, Meng and Hong, Richang and Hu, Wenbo},
+  journal={arXiv preprint arXiv:2506.12336},
+  year={2025}
 }
 ```
