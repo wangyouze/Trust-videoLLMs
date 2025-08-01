@@ -40,7 +40,6 @@ class ShareGPT4Video(BaseChat):
         super().__init__(model_id)
         self.device = device
         model_id = self.model_family[self.model_id]
-        model_id = "/data1/home/wangyouze/projects/checkpoints/sharegpt4video-8b/"
 
         model_name = get_model_name_from_path(model_id)
         from TrustVideoLLM.models.share4video.model.builder import load_pretrained_model
