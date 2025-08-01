@@ -83,7 +83,6 @@ class VideoLLaMA3(BaseChat):
         super().__init__(model_id)
         self.device = device
         model_id = self.model_family[self.model_id]
-        model_id = "/data1/home/wangyouze/checkpoints/VideoLLaMA3-7B/"
         self.model = AutoModelForCausalLM.from_pretrained(
             model_id,
             trust_remote_code=True,
