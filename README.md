@@ -1,7 +1,6 @@
-# Understanding and Benchmarking the Trustworthiness in Multimodal LLMs for Video Understanding
+# Benchmarking the Trustworthiness in Multimodal LLMs for Video Understanding
 
 ![](./docs/structure/logo.jpg)
-
 
 
 
@@ -10,6 +9,9 @@
 **Trust-videoLLM** is a robust benchmark designed to evaluate video-based large language models (videoLLMs) across five key dimensions: truthfulness, safety, robustness, fairness, and privacy. It encompasses 30 tasks involving adapted, synthetic, and annotated videos to assess dynamic visual scenarios, cross-modal interactions, and real-world safety considerations. Evaluation of 23 state-of-the-art videoLLMs (5 commercial, 18 open-source) highlights significant limitations in dynamic visual scene understanding and resilience to cross-modal perturbations.
 
 ![](./docs/structure/framewrok.png)
+
+### News
+-  **2025.11.08 🎉 🎉 🎉 [Our paper](https://arxiv.org/abs/2506.12336) has been accepted by the AAAI 2026 (Oral) ！See you in Singapore ~**
 
 ### VideoLLMs Evaluation Results Ranking
 ***
@@ -134,7 +136,7 @@ scripts/score
 If you find our work useful in your research, we kindly encourage you to cite our paper.
 ```
 @article{wang2025understanding,
-  title={Understanding and Benchmarking the Trustworthiness in Multimodal LLMs for Video Understanding},
+  title={Benchmarking the Trustworthiness in Multimodal LLMs for Video Understanding},
   author={Wang, Youze and Chen, Zijun and Chen, Ruoyu and Gu, Shishen and Dong, Yinpeng and Su, Hang and Zhu, Jun and Wang, Meng and Hong, Richang and Hu, Wenbo},
   journal={arXiv preprint arXiv:2506.12336},
   year={2025}
