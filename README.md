@@ -11,7 +11,7 @@
 ![](./docs/structure/framewrok.png)
 
 ### News
--  **2025.11.08 🎉 🎉 🎉 [Our paper](https://arxiv.org/abs/2506.12336) has been accepted by the AAAI 2026 (Oral) ！See you in Singapore ~**
+-  **2025.11.08** 🎉 🎉 🎉 [Our paper](https://arxiv.org/abs/2506.12336) has been accepted by the AAAI 2026 (Oral) ！See you in Singapore ~
 
 ### VideoLLMs Evaluation Results Ranking
 ***
